@@ -4,7 +4,7 @@
             <div class="alert alert-success" role="alert">
                 {{ session()->get('success') }}
             </div>
-        @endif                
+        @endif
         @if(session()->has('error'))
             <div class="alert alert-danger" role="alert">
                 {{ session()->get('error') }}
@@ -12,15 +12,15 @@
         @endif
         @if($addPost)
             @include('livewire.create')
-        @endif            
+        @endif
         @if($updatePost)
             @include('livewire.update')
         @endif
-    </div>    
+    </div>
     <div class="col-md-8">
         <div class="card">
             <div class="card-body">
-                @if(!$addPost)
+                @if(!$addPost && !$updatePost)
                 <button wire:click="addPost()" class="btn btn-primary btn-sm float-right">Add New Post</button>
                 @endif
                 <div class="table-responsive">
@@ -60,7 +60,7 @@
                 </div>
             </div>
         </div>
-    </div>    
+    </div>
     <script>
         function deletePost(id){
             if(confirm("Are you sure to delete this record?"))
