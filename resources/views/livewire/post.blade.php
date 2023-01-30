@@ -51,7 +51,7 @@
                             @else
                                 <tr>
                                     <td colspan="3" align="center">
-                                        No Categories Found.
+                                        No Posts Found.
                                     </td>
                                 </tr>
                             @endif
