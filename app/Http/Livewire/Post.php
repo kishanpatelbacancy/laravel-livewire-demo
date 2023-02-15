@@ -18,7 +18,7 @@ class Post extends Component
     ];
 
     /**
-     * List of add/edit form rules 
+     * List of add/edit form rules
      */
     protected $rules = [
         'title' => 'required',
@@ -30,10 +30,12 @@ class Post extends Component
      * @return void
      */
     public function resetFields(){
-        $this->title = '';
-        $this->description = '';
+        $this->reset([
+            'title',
+            'description'
+        ]);
     }
-    
+
     /**
      * render the post data
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
@@ -60,7 +62,7 @@ class Post extends Component
       */
     public function storePost()
     {
-        $this->validate(); 
+        $this->validate();
         try {
             Posts::create([
                 'title' => $this->title,
@@ -94,7 +96,7 @@ class Post extends Component
         } catch (\Exception $ex) {
             session()->flash('error','Something goes wrong!!');
         }
-        
+
     }
 
     /**
