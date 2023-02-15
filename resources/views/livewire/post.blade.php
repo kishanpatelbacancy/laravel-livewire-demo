@@ -44,7 +44,7 @@
                                         </td>
                                         <td>
                                             <button wire:click="editPost({{$post->id}})" class="btn btn-primary btn-sm">Edit</button>
-                                            <button onclick="deletePost({{$post->id}})" class="btn btn-danger btn-sm">Delete</button>
+                                            <button wire:click="deletePost({{$post->id}})" class="btn btn-danger btn-sm">Delete</button>
                                         </td>
                                     </tr>
                                 @endforeach
