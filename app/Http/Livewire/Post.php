@@ -14,7 +14,7 @@ class Post extends Component
      * delete action listener
      */
     protected $listeners = [
-        'deletePostListner'=>'deletePost'
+        'deletePostListener'=>'deletePost'
     ];
 
     /**
@@ -26,7 +26,7 @@ class Post extends Component
     ];
 
     /**
-     * Reseting all inputted fields
+     * Resetting all inputted fields
      * @return void
      */
     public function resetFields(){
